@@ -1,15 +1,8 @@
-import { Users } from "lucide-react";
 import { Icon } from "./Icon";
 import DropDown from "./DropDown";
 
 interface CategoriaItemProps {
-    categoria: {
-        id: number;
-        nome: string;
-        descricao: string;
-        tipo: string;
-        icone: string;
-    }
+    categoria: Categoria
 }
 
 export function CategoriaItem(props: CategoriaItemProps) {
