@@ -1,15 +1,11 @@
 import { CategoriaItem } from "@/components/CategoriaItem";
 import NavBar from "@/components/NavBar"
 import { Button, Link } from "@nextui-org/react";
+import { getCategorias } from "../actions/categorias/get";
 
 export default async function Home() {
   
-  async function getCategorias(){
-    const resp = await fetch("http://localhost:8080/categorias", { next: {revalidate: 0} })
-    return await resp.json()
-  }
-  
-  const categorias : Categoria[] = await getCategorias()
+  const categorias : Array<Categoria> = await getCategorias()
 
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -18,7 +14,7 @@ export default async function Home() {
         <div className="flex justify-between gap-20">
             <h2 className="text-2xl font-bold">Categorias</h2>
             <Link href="/categorias/new">
-              <Button color="primary">Faço nada, mas sou bonito</Button>
+              <Button color="primary">Nova Categoria</Button>
             </Link>
         </div>
         {categorias.map(categoria => <CategoriaItem categoria={categoria}/>)}
