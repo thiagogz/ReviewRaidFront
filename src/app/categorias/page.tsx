@@ -1,7 +1,8 @@
-import { CategoriaItem } from "@/components/CategoriaItem";
 import NavBar from "@/components/NavBar"
 import { Button, Link } from "@nextui-org/react";
 import { getCategorias } from "../actions/categorias/get";
+import { CategoriaItem } from "./CategoriaItem";
+
 
 export default async function Home() {
   
@@ -24,46 +25,48 @@ export default async function Home() {
   );
 }
 
-// categorias em json:
-// {
-//   "nome": "Multiplayer",
-//    "descricao": "Jogos que podem ser jogados com mais de uma pessoa, seja online ou localmente.",
-//    "tipo": "TAGS",
-//    "icone": "users"    
-// },    
-// {
-//   "nome": "Singleplayer",
-//    "descricao": "Jogos que podem ser jogados sozinho, sem a necessidade de outras pessoas.",
-//    "tipo": "TAGS",
-//    "icone": "user"   
-// },    
-// {
-//   "nome": "Ação",
-//    "descricao": "Jogos que envolvem muita ação, combate e movimentação rápida.",
-//    "tipo": "TAGS",
-//    "icone": "flame"
-// },    
-// {        
-//   "nome": "Aventura",
-//    "descricao": "Jogos que envolvem exploração, descoberta e narrativa.",
-//    "tipo": "TAGS",
-//    "icone": "pawprint"
-// },    
-// {
-//   "nome": "RPG",
-//    "descricao": "Jogos que envolvem estratégias, evolução de personagens e narrativa rica.",
-//    "tipo": "TAGS",
-//    "icone": "sparkle"
-// },   
-// {
-//   "nome": "Corrida",
-//    "descricao": "Jogos que envolvem competição de velocidade, seja em carros, motos ou outros veículos.",
-//    "tipo": "TAGS",
-//    "icone": "medal"
-// },   
-// {
-//   "nome": "Plataforma",
-//    "descricao": "Jogos que envolvem pulos, saltos e desafios de plataforma.",
-//    "tipo": "TAGS",
-//    "icone": "crown"
-// }
+/*
+categorias em json:  
+{
+    "nome": "Multiplayer",
+    "descricao": "Jogos que podem ser jogados com mais de uma pessoa, seja online ou localmente.",
+    "tipo": "TAG",
+    "icone": "users"
+},
+{
+    "nome": "Singleplayer",
+    "descricao": "Jogos que podem ser jogados sozinho, sem a necessidade de outras pessoas.",
+    "tipo": "TAG",
+    "icone": "user"
+},
+{
+    "nome": "Ação",
+    "descricao": "Jogos que envolvem muita ação, combate e movimentação rápida.",
+    "tipo": "TAG",
+    "icone": "flame"
+},
+{
+    "nome": "Aventura",
+    "descricao": "Jogos que envolvem exploração, descoberta e narrativa.",
+    "tipo": "TAG",
+    "icone": "pawprint"
+},
+{
+    "nome": "RPG",
+    "descricao": "Jogos que envolvem estratégias, evolução de personagens e narrativa rica.",
+    "tipo": "TAG",
+    "icone": "sparkle"
+},
+{
+    "nome": "Corrida",
+    "descricao": "Jogos que envolvem competição de velocidade, seja em carros, motos ou outros veículos.",
+    "tipo": "TAG",
+    "icone": "medal"
+},
+{
+    "nome": "Plataforma",
+    "descricao": "Jogos que envolvem pulos, saltos e desafios de plataforma.",
+    "tipo": "TAG",
+    "icone": "crown"
+}
+*/

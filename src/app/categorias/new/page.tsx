@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from "@/app/actions/categorias/create";
 import NavBar from "@/components/NavBar";
 import { SubmitButton } from "@/components/SubmitButton";
