@@ -66,7 +66,7 @@ export function EditForm(categoria : Categoria) {
 
             <div className="flex justify-around">
                 <Link href="/categorias">
-                    <Button variant="bordered">cancelar</Button>
+                    <Button variant="bordered">Cancelar</Button>
                 </Link>
 
                 <SubmitButton />

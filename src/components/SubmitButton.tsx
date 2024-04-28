@@ -7,6 +7,6 @@ export function SubmitButton(){
     const { pending } = useFormStatus()
 
     return (
-        <Button type="submit" color="primary" isLoading={pending}>salvar</Button>
+        <Button type="submit" color="primary" isLoading={pending}>Salvar</Button>
     )
 }

@@ -20,7 +20,7 @@ export async function update(prevState: any, formData: FormData){
         }
     }
 
-    const resp = await fetch(`${process.env.API_BASE_URL}/categorias`, options)
+    const resp = await fetch(`${process.env.API_BASE_URL}/categorias/${id}`, options)
 
     if (resp.ok){
         redirect("/categorias")
