@@ -11,6 +11,6 @@ interface Jogo {
     name: string;
     image: string;
     description: string;
-    launch_date: Date;
+    launchDate: Date;
     categoria: Categoria;
 }

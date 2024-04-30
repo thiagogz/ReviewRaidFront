@@ -40,7 +40,7 @@ export function JogosItem({ jogos }: JogosItemProps){
                     </div>
                 </div>
                 <span className="text-justify py-2">{jogos.description}</span>
-                <span className="text-sm text-right">Data de Lançamento: {String(jogos.launch_date)}</span>
+                <span className="text-sm text-right">Data de Lançamento: {String(jogos.launchDate)}</span>
             </div>
             <div className="flex items-center">
                 <DropDownActions 
