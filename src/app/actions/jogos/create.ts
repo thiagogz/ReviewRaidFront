@@ -5,15 +5,15 @@ import { redirect } from "next/navigation"
 export async function create(prevState: any, formData: FormData){
     await new Promise( r => setTimeout(r, 1000))
 
-    const date = formData.get("launch_date");
+    const date = formData.get("launchDate");
     const partes = String(date).split('-');
-    formData.set("launch_date", partes[2] + '/' + partes[1] + '/' + partes[0]);
+    formData.set("launchDate", partes[2] + '/' + partes[1] + '/' + partes[0]);
 
     const data = {
         name: formData.get("name"),
         image: formData.get("image"),
         description: formData.get("description"),
-        launch_date: formData.get("launch_date"),
+        launch_date: formData.get("launchDate"),
         categoria: {
             id: formData.get("categoria")
         }
@@ -39,7 +39,7 @@ export async function create(prevState: any, formData: FormData){
         return {
             message_name: messages.find( (m: any) => m.campo == "name")?.mensagem || '',
             message_description: messages.find( (m: any) => m.campo == "description")?.mensagem || '',
-            message_launch_date: messages.find( (m: any) => m.campo == "launch_date")?.mensagem || '',
+            message_launchDate: messages.find( (m: any) => m.campo == "launchDate")?.mensagem || '',
         }
     }
 

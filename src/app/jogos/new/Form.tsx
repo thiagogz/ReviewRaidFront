@@ -8,16 +8,15 @@ import { Input } from "@nextui-org/react";
 import Link from "next/link";
 import { useFormState } from "react-dom";
 
-
-const initialState = {
-    message_name: '',
-    message_description: '',
-    message_launch_date: ''
-}
-
-
 export function Form(props: { categorias: Array<Categoria> }) {
+    const initialState = {
+        message_name: '',
+        message_description: '',
+        message_launchDate: '' // Updated property name
+    }
+
     const { categorias } = props
+    
 
     const [state, formAction] = useFormState(create, initialState)
     return (
@@ -44,9 +43,9 @@ export function Form(props: { categorias: Array<Categoria> }) {
             />
             
             <Input
-                key="descricao"
+                key="description"
                 label="Descrição"
-                name="descricao"
+                name="description"
                 variant="bordered"
                 labelPlacement={"outside"}
                 isRequired={true}
@@ -57,14 +56,14 @@ export function Form(props: { categorias: Array<Categoria> }) {
             <Input
                 type="date"
                 pattern="dd/MM/yyyy"
-                key="launch_date"
+                key="launchDate"
                 label="Data de lançamento"
-                name="date"
+                name="launchDate"
                 variant="bordered"
                 labelPlacement={"outside"}
                 isRequired={true}
-                isInvalid={state?.message_launch_date != ''}
-                errorMessage={state?.message_launch_date}
+                isInvalid={state?.message_launchDate != ''}
+                errorMessage={state?.message_launchDate}
             />
 
             <CategoriaSelect categorias={categorias} />

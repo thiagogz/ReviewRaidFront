@@ -1,10 +1,6 @@
 import NavBar from "@/components/NavBar"
 import { get } from "../actions/jogos/get";
 import { getCategorias } from "../actions/categorias/getCategorias";
-import { Filter, Plus } from "lucide-react";
-import { Button, Link } from "@nextui-org/react";
-import { CategoriaSelect } from "@/components/CategoriaSelect";
-import { JogosItem } from "./JogosItem";
 import { JogosData } from "./JogosData";
 
 export default async function Home() {

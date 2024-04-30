@@ -23,7 +23,7 @@ export function CategoriaSelect({categorias, onChange}: CategoriaSelectProps) {
             onChange={onChange}
         >
             {(categoria) => 
-                <SelectItem key={categoria.nome} startContent={<Icon name={categoria.icone} />}>
+                <SelectItem key={categoria.id} startContent={<Icon name={categoria.icone} />}>
                     {categoria.nome}
                 </SelectItem>
             }
