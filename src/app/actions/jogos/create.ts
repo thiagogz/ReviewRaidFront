@@ -13,7 +13,7 @@ export async function create(prevState: any, formData: FormData){
         name: formData.get("name"),
         image: formData.get("image"),
         description: formData.get("description"),
-        launch_date: formData.get("launchDate"),
+        launchDate: formData.get("launchDate"),
         categoria: {
             id: formData.get("categoria")
         }
