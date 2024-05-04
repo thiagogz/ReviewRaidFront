@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar"
 import { Button, Link } from "@nextui-org/react";
-import { getCategorias } from "../actions/categorias/get";
+import { getCategorias } from "../actions/categorias/getCategorias";
 import { CategoriaItem } from "./CategoriaItem";
 
 

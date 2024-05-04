@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface NavBarProps {
-    active: "categorias" | "noticias" | "tendencias" | "";
+    active: "categorias" | "jogos" | "tendencias" | "";
 
 }
 
@@ -14,7 +14,7 @@ export default function NavBar(props : NavBarProps) {
             <h1 className="text-3xl font-bold"><Link href="/" >Review Raid</Link></h1>
             <ul className="flex gap-20">
                 <li className={active == "categorias" ? activeClass : ""}><Link href="/categorias">Categorias</Link></li>
-                <li className={active == "noticias" ? activeClass : ""}><Link href="/noticias">Notícias</Link></li>
+                <li className={active == "jogos" ? activeClass : ""}><Link href="/jogos">Jogos</Link></li>
                 <li className={active == "tendencias" ? activeClass : ""}><Link href="/tendencias">Tendências</Link></li>
             </ul>
             <div className="w-14 rounded-full overflow-hidden">

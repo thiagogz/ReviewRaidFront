@@ -5,3 +5,12 @@ interface Categoria {
     tipo: string;
     icone: string;
 }
+
+interface Jogo {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    launchDate: Date;
+    categoria: Categoria;
+}
